@@ -1,0 +1,17 @@
+Вопрос:
+
+    Сколько существует способов задать переменную типа slice или map?
+
+Ответ:
+
+    Для slice 4:
+    var varStyle []string
+    literalStyle := []string{}
+    newStyle := new([]string)
+    makeStyle := make([]string, 0)
+
+    Для map те же 4
+    var varStyle map[int]int
+    literalStyle = map[string]int{}
+    newStyle := new(map[string]int)
+    makeStyle := make(map[string]int)

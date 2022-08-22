@@ -1,0 +1,21 @@
+Вопрос:
+
+	Что выведет данная программа и почему?
+
+func main() {
+  slice := []string{"a", "a"}
+
+  func(slice []string) {
+     slice = append(slice, "a")
+     slice[0] = "b"
+     slice[1] = "b"
+     fmt.Print(slice)
+  }(slice)
+  fmt.Print(slice)
+}
+
+Ответ:
+
+    [b b a][a a]
+    slice внутри анониимной функции перекрывает slice в main, добавление происходит успешно и в первый раз
+    выводится [b b a], но так как из-за перекрытия имен slice в main не изменялся, то во второй раз выводится [a a].

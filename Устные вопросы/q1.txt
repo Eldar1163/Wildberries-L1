@@ -1,0 +1,18 @@
+Вопрос: Какой самый эффективный способ конкатенации строк?
+
+Ответ: Используя strings.Builder
+
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+var b strings.Builder
+
+func main() {
+	b.WriteString("Hello ")
+	b.WriteString("World!")
+	fmt.Println(b.String())
+}
